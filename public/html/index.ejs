@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Cuaca dengan Tabel Perkiraan 4 Jam</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button style="display: none" id="getWeatherBtn" class="btn" onclick="getLocation()">Cek Cuaca Berdasarkan Lokasi</button>
+    </div>
+
+    <div id="wheater-city"></div>
+    <!-- Tabel untuk menampilkan ramalan cuaca -->
+    <table id="weather-table">
+      <thead>
+        <tr>
+          <th>Waktu</th>
+          <th>langitude</th>
+          <th>longitude</th>
+          <th>Kecepatan Angin</th>
+          <th>Suhu (°C)</th>
+          <th>Deskripsi Cuaca</th>
+        </tr>
+      </thead>
+      <tbody id="forecast-body"></tbody>
+    </table>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/static/js/index.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#getWeatherBtn").click();
+    });
+  </script>
+</html>

@@ -1,0 +1,108 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff;
+}
+
+/* Container untuk tombol */
+.container {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling tombol */
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Efek Hover */
+.btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Tabel Cuaca */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+}
+
+td {
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #555;
+}
+
+td img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Styling untuk responsive */
+@media (max-width: 768px) {
+  table {
+    width: 90%;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+#weather-table {
+  max-width: 80vh; /* Batasi lebar maksimal tabel */
+  max-height: 50vh; /* Batasi tinggi maksimal tabel */
+  overflow: auto; /* Tambahkan scroll jika tabel melebihi batas */
+  border-collapse: collapse; /* Untuk tampilan tabel yang lebih rapi */
+  margin: auto; /* Pusatkan tabel */
+  margin-top: -10px;
+}
+
+#weather-table th,
+#weather-table td {
+  border: 1px solid #ddd; /* Tambahkan border pada sel */
+  padding: 8px; /* Tambahkan padding */
+  text-align: center; /* Teks rata tengah */
+  word-wrap: break-word; /* Tangani teks panjang */
+}
+
+#weather-table thead {
+  background-color: #f2f2f2; /* Warna latar belakang header */
+  position: sticky; /* Header tetap terlihat saat scroll */
+  top: 0;
+}
+
+#forecast-body {
+  overflow-y: auto; /* Scroll pada konten tabel jika perlu */
+}
